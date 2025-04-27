@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix Logo" />
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">TV Shows</a>
+      <a href="#">Movies</a>
+      <a href="#">Latest</a>
+      <a href="#">My List</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Unlimited movies, TV shows, and more.</h1>
+      <p>Watch anywhere. Cancel anytime.</p>
+      <button class="btn" id="get-started-btn">Get Started</button>
+    </div>
+  </section>
+
+  <section class="movie-section">
+    <h2>Trending Now</h2>
+    <div class="scroll-buttons">
+      <button onclick="scrollMovies('row1', -500)">&#8592;</button>
+      <button onclick="scrollMovies('row1', 500)">&#8594;</button>
+    </div>
+    <div class="movie-row" id="row1">
+      <img src="movie1.png" alt="Movie 1" />
+      <img src="movie2.png" alt="Movie 2" />
+      <img src="movie3.png" alt="Movie 3" />
+      <img src="movie4.png" alt="Movie 4" />
+      <img src="movie5.png" alt="Movie 5" />
+      <img src="movie6.png" alt="Movie 6" />
+      <img src="movie7.png" alt="Movie 7" />
+      <img src="movie8.png" alt="Movie 8" />
+      <img src="movie9.png" alt="Movie 9" />
+      <img src="movie10.png" alt="Movie 10" />
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
