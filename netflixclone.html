@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Netflix Clone</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #121111;
+      }
+      header img {
+        height: 40px;
+      }
+      nav a {
+        color: #fff;
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .hero {
+        position: relative;
+        background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/7c191240-f3e0-41c9-bf35-33ee06c3a89c/aafc39e8-69ef-402d-8e19-2aef4007a0a4/US-en-20240408-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-content {
+        max-width: 700px;
+      }
+      .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      .hero-content p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+      }
+      .btn {
+        padding: 10px 20px;
+        background-color: #e50914;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: background-color 0.3s;
+      }
+      .btn:hover {
+        background-color: #f40612;
+      }
+      .movie-section {
+        padding: 40px 20px;
+      }
+      .movie-section h2 {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+      }
+      .movie-row {
+        display: flex;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+      }
+      .movie-row::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for better UX */
+      }
+      .movie-row img {
+        height: 200px;
+        margin-right: 10px;
+        border-radius: 5px;
+        transition: transform 0.2s;
+      }
+      .movie-row img:hover {
+        transform: scale(1.1);
+      }
+      .scroll-buttons {
+        text-align: right;
+        margin-bottom: 10px;
+      }
+      .scroll-buttons button {
+        background-color: #e50914;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        margin-left: 5px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+        alt="Netflix Logo"
+      />
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">TV Shows</a>
+        <a href="#">Movies</a>
+        <a href="#">Latest</a>
+        <a href="#">My List</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Unlimited movies, TV shows, and more.</h1>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <button class="btn" id="get-started-btn">Get Started</button>
+      </div>
+    </section>
+
+    <section class="movie-section">
+      <h2>Trending Now</h2>
+      <div class="scroll-buttons">
+        <button onclick="scrollMovies('row1', -500)">&#8592;</button>
+        <button onclick="scrollMovies('row1', 500)">&#8594;</button>
+      </div>
+      <div class="movie-row" id="row1">
+        <img src="movie1.png" alt="Movie 1" />
+        <img src="movie2.png" alt="Movie 2" />
+        <img src="movie3.png" alt="Movie 3" />
+        <img src="movie4.png" alt="Movie 4" />
+        <img src="movie5.png" alt="Movie 5" />
+        <img src="movie6.png" alt="Movie 6" />
+        <img src="movie7.png" alt="Movie 7" />
+        <img src="movie8.png" alt="Movie 8" />
+        <img src="movie9.png" alt="Movie 9" />
+        <img src="movie10.png" alt="Movie 10" />
+      </div>
+    </section>
+
+    <script>
+      function scrollMovies(rowId, distance) {
+        const row = document.getElementById(rowId);
+        row.scrollBy({
+          left: distance,
+          behavior: "smooth",
+        });
+      }
+
+      document
+        .getElementById("get-started-btn")
+        .addEventListener("click", function () {
+          alert("Redirecting you to sign-up page!");
+        });
+    </script>
+  </body>
+</html>
